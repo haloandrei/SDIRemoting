@@ -1,6 +1,8 @@
 package com.haloandrei.remoting.common.domain;
 
-public class Movie extends BaseEntity<Long>{
+import java.io.Serializable;
+
+public class Movie extends BaseEntity<Long> {
     private String type;
     private String name;
     private int rating;

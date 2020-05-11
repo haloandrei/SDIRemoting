@@ -1,6 +1,8 @@
 package com.haloandrei.remoting.common.domain;
 
-public class BaseEntity<ID> {
+import java.io.Serializable;
+
+public class BaseEntity<ID> implements Serializable {
     private ID id;
 
     public ID getId() {

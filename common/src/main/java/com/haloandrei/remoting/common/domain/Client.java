@@ -2,7 +2,7 @@ package com.haloandrei.remoting.common.domain;
 
 import java.util.Objects;
 
-public class Client extends BaseEntity<Long>{
+public class Client extends BaseEntity<Long> {
     private String name;
     private double moneySpent;
 
