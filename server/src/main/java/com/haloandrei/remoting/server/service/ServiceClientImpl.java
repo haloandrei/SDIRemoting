@@ -1,18 +1,14 @@
-package com.haloandrei.remoting.client.service;
+package com.haloandrei.remoting.server.service;
 
 import com.haloandrei.remoting.common.ServiceClient;
 import com.haloandrei.remoting.common.domain.Client;
 import com.haloandrei.remoting.common.domain.Movie;
 import com.haloandrei.remoting.common.domain.validators.ValidatorException;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
 import java.util.concurrent.CompletableFuture;
 
-public class ServiceClientClientSide implements ServiceClient {
-
-    @Autowired
-    private ServiceClient serviceClient;
+public class ServiceClientImpl implements ServiceClient {
 
     @Override
     public void addClient(Client client) throws ValidatorException {
@@ -31,6 +27,12 @@ public class ServiceClientClientSide implements ServiceClient {
 
     @Override
     public ArrayList<Client> getAllClients() {
-        return serviceClient.getAllClients();
+        ArrayList<Client> list = new ArrayList<>();
+        // new Movie("a","b",10,10)
+        list.add(new Client("John",21));
+        list.add(new Client("Snow",21));
+
+        return list;
+
     }
 }

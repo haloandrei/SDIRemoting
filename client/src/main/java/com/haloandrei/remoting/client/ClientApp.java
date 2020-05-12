@@ -19,8 +19,9 @@ public class ClientApp {
 
         ServiceMovie serviceMovie = context.getBean(ServiceMovie.class);
         //TODO Beans pt client si Acquisitions
-        ServiceClient serviceClient =new ServiceClientClientSide();
-        ServiceAcquisition serviceAcquisition = new ServiceAcquisitionClientSide();
+        ServiceClient serviceClient =context.getBean(ServiceClient.class);
+
+        ServiceAcquisition serviceAcquisition = context.getBean(ServiceAcquisition.class);
         Console console = new Console( serviceMovie,serviceClient,serviceAcquisition);
         console.run();
 

@@ -9,6 +9,6 @@ import java.util.Scanner;
 public class ListClientsCommand implements Command {
     @Override
     public void execute(Scanner scanner, ServiceMovie serviceMovie, ServiceClient serviceClient, ServiceAcquisition serviceAcquisition) {
-
+        serviceClient.getAllClients().forEach(System.out::println);
     }
 }
