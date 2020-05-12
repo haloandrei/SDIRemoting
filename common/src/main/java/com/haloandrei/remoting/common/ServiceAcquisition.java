@@ -8,6 +8,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
+
 public interface ServiceAcquisition {
     List<Acquisition> getAllAcquisitions();
     void addAcquisition(Acquisition acquisition) throws MovieRentalException;

@@ -9,6 +9,7 @@ import org.springframework.remoting.rmi.RmiServiceExporter;
 
 @Configuration
 public class ServiceConfig {
+
     @Bean
     RmiServiceExporter rmiServiceExporter(){
         RmiServiceExporter rmiServiceExporter = new RmiServiceExporter();

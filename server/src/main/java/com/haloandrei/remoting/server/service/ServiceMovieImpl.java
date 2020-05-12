@@ -3,19 +3,20 @@ package com.haloandrei.remoting.server.service;
 import com.haloandrei.remoting.common.ServiceMovie;
 import com.haloandrei.remoting.common.domain.Movie;
 import com.haloandrei.remoting.common.domain.validators.ValidatorException;
+import org.springframework.scheduling.annotation.AsyncResult;
 
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Optional;
-import java.util.concurrent.CompletableFuture;
-import java.util.stream.Collectors;
-import java.util.stream.StreamSupport;
+import java.util.concurrent.Future;
+
 
 public class ServiceMovieImpl implements ServiceMovie {
+
+
     @Override
-    public CompletableFuture<ArrayList<Movie>> getSortedMovies() {
+    public Future<List<Movie>> getSortedMovies() {
         return null;
     }
 
@@ -35,8 +36,13 @@ public class ServiceMovieImpl implements ServiceMovie {
     }
 
     @Override
-    public CompletableFuture<ArrayList<Movie>> getAllMovies() {
+    public ArrayList<Movie> getAllMovies() {
         //TODO de returnat toate filmele din JDBC
-        return ;
+
+        ArrayList<Movie> list = new ArrayList<Movie>();
+       // new Movie("a","b",10,10)
+        list.add(new Movie("a","b",10,10));
+        list.add(new Movie("d","c",10,10));
+        return list;
     }
 }

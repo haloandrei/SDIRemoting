@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.Future;
 
 public class ServiceMovieClientSide implements ServiceMovie {
     @Autowired
@@ -15,7 +16,7 @@ public class ServiceMovieClientSide implements ServiceMovie {
 
 
     @Override
-    public CompletableFuture<ArrayList<Movie>> getSortedMovies() {
+    public Future<List<Movie>> getSortedMovies() {
         return null;
     }
 
@@ -35,7 +36,7 @@ public class ServiceMovieClientSide implements ServiceMovie {
     }
 
     @Override
-    public CompletableFuture<ArrayList<Movie>> getAllMovies() {
+    public ArrayList<Movie> getAllMovies() {
         return movieService.getAllMovies();
     }
 }
