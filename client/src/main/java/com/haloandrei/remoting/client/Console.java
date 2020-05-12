@@ -18,6 +18,7 @@ public class Console {
     private Scanner scanner;
     private Map<Integer, Command> commands;
 
+
     Console(ServiceMovie sMovie, ServiceClient sClient,ServiceAcquisition sAcquisition){
         serviceMovie = sMovie;
         serviceClient = sClient;

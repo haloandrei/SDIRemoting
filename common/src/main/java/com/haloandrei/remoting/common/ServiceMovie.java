@@ -6,10 +6,11 @@ import com.haloandrei.remoting.common.domain.validators.ValidatorException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.Future;
 
 public interface ServiceMovie {
 
-    CompletableFuture<ArrayList<Movie>> getSortedMovies();
+    Future<List<Movie>> getSortedMovies();
 
     void addMovie(Movie movie) throws ValidatorException;
 
@@ -17,6 +18,6 @@ public interface ServiceMovie {
 
     void updateMovie(Movie movie) throws ValidatorException;
 
-    CompletableFuture<ArrayList<Movie>> getAllMovies();
+    ArrayList<Movie> getAllMovies();
 
 }

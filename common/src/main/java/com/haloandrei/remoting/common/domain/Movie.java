@@ -1,8 +1,10 @@
 package com.haloandrei.remoting.common.domain;
 
+import org.springframework.context.annotation.Bean;
+
 import java.io.Serializable;
 
-public class Movie extends BaseEntity<Long> {
+public class Movie extends BaseEntity<Long> implements Serializable{
     private String type;
     private String name;
     private int rating;
